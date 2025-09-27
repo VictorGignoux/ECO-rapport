@@ -1,0 +1,101 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10vh;
+}
+
+#tp1-second-part{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+
+#tp1-synth{
+    color: var(--title);
+    font-family: alte, sans-serif;
+    font-size: 1.5rem;
+    width: 40%;
+    text-align: justify;
+}
+
+#tp1-synth a{
+    color: var(--btn);
+}
+
+#tp1-radar{
+    width: 40%;
+}
+
+.radar-btn{
+    color: var(--text);
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    font-size: 0.8rem;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.radar-btn-current{
+    background-color: var(--container-sec);
+}
+
+.radar-btn:hover{
+    cursor: pointer;
+}
+
+.radar-btn:not(.radar-btn-current):hover{
+    background-color: #ecf1eb;
+}
+
+#tp1-radar-images img{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    width: 100%;
+    box-shadow: 10px 10px var(--shadow);
+}
+
+#tp2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+#tp2-title{
+    width: 75%;
+}
+
+#tp2-exercices{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+#tp2-exemple{
+    display: flex;
+    flex-direction: column;
+}
+
+#tp2-exemple img{
+    margin: 3vh 1vw;
+}
+
+#tp2-exemple-site{
+    display: flex;
+    gap: 0.2vw;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#tp2-memo{
+    display: flex;
+    width: 60%;
+}
+
+#tp2-memo img{
+    object-fit: cover;
+    width: 100%;
+}

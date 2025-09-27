@@ -1,0 +1,13 @@
+#head{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#head-me{
+    color: var(--text-sec);
+    font-family: caviar-b, sans-serif;
+    font-size: 1.5rem;
+}
