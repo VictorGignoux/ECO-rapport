@@ -9,13 +9,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 15vh;
+    width: 90%;
 }
 
 #tp1-synth{
-    color: var(--title);
+    color: var(--text-sec);
     font-family: alte, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 40%;
     text-align: justify;
 }
@@ -47,7 +47,7 @@
 }
 
 .radar-btn:not(.radar-btn-current):hover{
-    background-color: #ecf1eb;
+    background-color: #1a1464;
 }
 
 #tp1-radar-images img{

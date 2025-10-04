@@ -4,15 +4,15 @@
 }
 
 html{
-    --bg: #008060;
-    --title: #fcfcfc;
-    --text: #052d33;
-    --text-sec: #b6d295;
-    --btn: #b6d295;
-    --container: #fcfcfc;
-    --container-sec: #b6d295;
-    --shadow: #052d33;
-    --border: #052d33;
+    --bg: #f8f7ff;
+    --title: #090541;
+    --text: #cae3e7;
+    --text-sec: #090541;
+    --btn: #a7a877;
+    --container: #090541;
+    --container-sec: #a7a877;
+    --shadow: #090541;
+    --border: #bfe9f0;
 }
 
 @font-face {
@@ -72,6 +72,10 @@ a{
     color: var(--container-sec);
 }
 
+p{
+    font-family: alte;
+}
+
 /* TABS */
 
 .tab {
@@ -95,6 +99,7 @@ a{
     border: 1px solid var(--border);
     padding: 1.2vh 1vw;
     max-width: 9vw;
+    color: var(--text);
 }
 
 /* BUTTON */
@@ -114,9 +119,34 @@ a{
     background-color: var(--container);
     padding: 5vh 3vw;
     margin-bottom: 10vh;
-    border-radius: 2rem;
-    box-shadow: 10px 10px var(--shadow);
     font-family: alte, sans-serif;
     max-width: 70%;
     text-align: justify;
+    color: var(--text);
+}
+
+.page-btn{
+    position: fixed;
+    top: 0;
+    width: 5vw;
+    height: 100vh;
+    background-color: #ecebf3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-sec);
+    font-size: 1.4rem;
+}
+
+#next-page-btn{
+    right: 0;
+}
+
+#previous-page-btn{
+    left: 0;
+}
+
+.arrow-svg{
+    width: 4vw;
+    height: 4vw;
 }
