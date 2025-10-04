@@ -59,6 +59,10 @@ h1{
     font-family: caviar, sans-serif;
 }
 
+.container h2{
+    color: var(--text);
+}
+
 h2{
     color: var(--text-sec);
     font-size: 2rem;
@@ -120,6 +124,7 @@ p{
     padding: 5vh 3vw;
     margin-bottom: 10vh;
     font-family: alte, sans-serif;
+    font-size: 1.2rem;
     max-width: 70%;
     text-align: justify;
     color: var(--text);

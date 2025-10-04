@@ -22,6 +22,112 @@
     </div>
 
     <div id="tp3">
+        <div class="container">
+            Le RGESN (Référentiel Général d’Écoconception des Services Numériques) est un cadre français visant à réduire 
+            l’impact environnemental des services numériques. Il s’inscrit dans la loi REEN (Réduction de l’Empreinte Environnementale du Numérique), 
+            adoptée en 2021. Il est piloté par plusieurs acteurs publics : la DINUM (Direction interministérielle du Numérique), 
+            le Ministère de la Transition Écologique, avec l’ADEME, l’Institut du Numérique Responsable (INR), et en collaboration avec l’Arcep, l’Arcom, 
+            etc. Le référentiel est construit à partir d’un plus grand guide (le GR491) de l’INR, qui avait beaucoup de critères, 
+            puis ont été extraits ceux qui sont génériques, vérifiables, intemporels, et à fort impact. Il y a eu plusieurs versions :
+            la version de mai 2024 est une évolution avec quelques modifications des critères, nouveaux niveaux de priorité, réorganisation. 
+        </div>
+
+        <h2>Familles de bonnes pratiques</h2>
+
+        <div id="tp3-familles">
+            <div><strong>Stratégie</strong> : Pilotage global, pertinence du service, évaluation continue, formation des équipes, gouvernance.</div>
+            <div><strong>Spécifications</strong> : Lors de la définition des besoins fonctionnels et techniques, inclure des contraintes environnementales dans les 
+            choix de conception</div>
+            <div><strong>Architecture</strong> : Structurer le système (interfaces, modules, services, infrastructure) de façon à minimiser les coûts énergétiques et 
+            les redondances inutiles</div>
+            <div><strong>UX / UI</strong> : Conception de l’expérience utilisateur (interfaces, comport­ements, interactions) de manière sobre et optimisée</div>
+            <div><strong>Contenus</strong> : Gestion, format, structuration des contenus (texte, images, vidéos, médias) pour limiter leur poids et les rendre plus pertinents</div>
+            <div><strong>Frontend</strong> : Optimisation des ressources et des scripts pour l'interface</div>
+            <div><strong>Backend</strong> : Traitement des données côté serveur (API, base de données...). Des requêtes mal optimisées, des redondances ou des traitements 
+            complexes peuvent saturer les serveurs et nécessiter des infrastructures plus puissantes</div>
+            <div><strong>Hébergement</strong> : Choisir des hébergeurs verts, localiser les données de manière stratégique, et utiliser des ressources partagées permet de limiter cette empreinte</div>
+            <div><strong>Algorithmie / IA</strong> : Pour les services intégrant des modèles algorithmiques ou d’intelligence artificielle : optimisation, frugalité, transparence, contrôle des données</div>
+        </div>
+
+        <div id="tp3-critères-container" class="container">
+            <h2>5 critères pertinents</h2>
+
+            <div id="tp3-critères">
+                <div><strong>Le service est utilisable avec une connexion à bas débit</strong> : Tous les utilisateurs ne disposent pas d’une connexion rapide (zones rurales, forfaits mobiles limités). Ce critère pousse à optimiser les ressources côté front : images compressées, chargement différé, scripts limités.</div>
+                <div><strong>Le format des images est adapté au contenu et au contexte d’affichage</strong> : Les images sont souvent la plus grosse part du poids d’une page web. Choisir le bon format (ex : WebP ou AVIF pour les photos, SVG pour les logos) permet des gains de taille jusqu’à 80 %. Cela améliore le temps de chargement, réduit les transferts réseau et donc l’impact environnemental</div>
+                <div><strong>Les médias (vidéos, sons, animations) ne sont pas lancés automatiquement</strong> : Le lancement automatique de vidéos consomme beaucoup de données et de ressources CPU/GPU. Il peut gêner l’utilisateur et augmenter inutilement l’impact environnemental. Laisser l’utilisateur déclencher les médias manuellement donne plus de contrôle et réduit la charge.</div>
+                <div><strong>Le service évite l’utilisation du scroll infini</strong> : Le scroll infini charge automatiquement de nouveaux contenus sans interaction, ce qui peut : surcharger la mémoire du navigateur, entraîner un gaspillage de données, nuire à la navigation (perte du bas de page, surcharge cognitive). Une pagination ou un bouton “Voir plus” est plus économe et donne le choix à l’utilisateur.</div>
+                <div><strong>Le service permet à l’utilisateur de décider de l’activation des services tiers</strong> : Les services tiers (Google Maps, YouTube, traceurs, widgets sociaux) se chargent souvent automatiquement et : alourdissent les pages, multiplient les requêtes réseau, consomment beaucoup côté client. En donnant à l’utilisateur la possibilité de les activer manuellement (via un clic ou une autorisation), on réduit l’impact par défaut.</div>
+            </div>
+
+            <table class="tab">
+                <tr class="tab-line tab-cat">
+                    <th class="tab-line-item">Famille RGESN</th>
+                    <th class="tab-line-item">Critère séléctionné</th>
+                    <th class="tab-line-item">Respecté ? </th>
+                    <th class="tab-line-item">Preuves/Observations</th>
+                    <th class="tab-line-item">Outils utilisés pour vérifier</th>
+                </tr>
+
+                <tr class="tab-line">
+                    <th class="tab-line-item">UX/UI</th>
+                    <th class="tab-line-item">Le service est utilisable avec une connexion à bas débit</th>
+                    <th class="tab-line-item">Non</th>
+                    <th class="tab-line-item">La page met plusieurs secondes à se charger en 3G et 4G lente </th>
+                    <th class="tab-line-item">Simulation du chargement de la page avec une connexion faible : DevTools > Network > Throttling > 3G et slow 4G</th>
+                </tr>
+
+                <tr class="tab-line">
+                    <th class="tab-line-item">Contenus</th>
+                    <th class="tab-line-item">Le format des images est adapté au contenu et au contexte d’affichage</th>
+                    <th class="tab-line-item">Oui</th>
+                    <th class="tab-line-item">Les images ne sont pas surdimensionnées et ont des formats cohérents (png, jpg)</th>
+                    <th class="tab-line-item">DevTools</th>
+                </tr>
+
+                <tr class="tab-line">
+                    <th class="tab-line-item">UX/UI</th>
+                    <th class="tab-line-item">Les médias (vidéos, sons, animations) ne sont pas lancés automatiquement</th>
+                    <th class="tab-line-item">Oui</th>
+                    <th class="tab-line-item">Aucune vidéos ou média lancé après le chargement de la page</th>
+                    <th class="tab-line-item"></th>
+                </tr>
+
+                <tr class="tab-line">
+                    <th class="tab-line-item">Frontend</th>
+                    <th class="tab-line-item">Le poids total des pages est limité</th>
+                    <th class="tab-line-item">Non</th>
+                    <th class="tab-line-item">Page trop lourde (3.8 Mo)</th>
+                    <th class="tab-line-item">EcoIndex</th>
+                </tr>
+
+                <tr class="tab-line">
+                    <th class="tab-line-item">Frontend</th>
+                    <th class="tab-line-item">Le service permet à l’utilisateur de décider de l’activation des services tiers</th>
+                    <th class="tab-line-item">Non</th>
+                    <th class="tab-line-item">Le site mentionne l’usage de Google Analytics dans les mentions légales. Les cookies et services de suivi sont déclarés, sans indication claire qu’ils sont désactivés par défaut.</th>
+                    <th class="tab-line-item">Mentions légales + politique de cookies</th>
+                </tr>
+            </table>
+        </div>
+
+
+        <h2>Améliorations</h2>
+
+        <div id="tp3-améliorations">
+            <h3>Le service est utilisable avec un débit faible</h3>
+            <p>Afin de remplir ce critères, l'équipe des designers pourrait faire une version plus légère du site avec moins d'images et de lourds carroussels, regrouper et minimiser le CSS et employer le chargement différé pour les images.</p>
+            <p>Ces améliorations visent à permettre à des personnes ne bénéficiant pas d'une connexion haut débit d'accéder facilement au site, mais nécessite une importante refonte du site avec probablement moins de contenu.</p>
+
+            <h3>Le poids total des pages est limité</h3>
+            <p>APour réduire leur poids et répondre au critère du RGESN, plusieurs actions peuvent être mises en place : compression et conversion des images en formats légers (WebP/AVIF), réduction des scripts et polices inutiles, minification du code et mise en cache, ainsi qu’un allègement du contenu visuel trop gourmand (carrousels, vidéos).</p>
+            <p>Ces améliorations, menées conjointement par la DSI, les développeurs, les graphistes et le service communication, permettraient de réduire le poids des pages de plus de 60 %, d’améliorer les performances et de limiter l’impact environnemental. Les principaux freins résident dans la charge de travail initiale et la crainte de pertes esthétiques ou marketing, mais les bénéfices en termes de sobriété, d’accessibilité et de rapidité sont majeurs.</p>
+
+            <h3>Le service permet à l’utilisateur de décider de l’activation des services tiers</h3>
+            <p>Le site de la Ville de Laval intègre plusieurs services tiers, comme les outils de mesure d’audience, les vidéos externes ou les boutons de partage sur les réseaux sociaux. Pour répondre à ce critère, il est essentiel de donner à l’usager le contrôle sur ces éléments. Cela passe par la mise en place d’un bandeau de consentement clair et granulaire, permettant d’activer ou non chaque service tiers, ainsi que par le blocage par défaut des scripts tant que le consentement n’est pas donné.</p>
+            <p>Ces actions, impliquant la DSI, les développeurs et le service communication, garantiraient une meilleure conformité RGPD et une réduction des ressources chargées inutilement, tout en améliorant la transparence envers les citoyens. Les freins principaux concernent la complexité technique et la crainte de perdre certaines statistiques, mais les gains en sobriété numérique et en confiance utilisateur sont significatifs.</p>
+        </div>
+
     </div>
 
     <a id="previous-page-btn" href="./tp2.html" class="page-btn">

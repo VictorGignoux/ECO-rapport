@@ -62,7 +62,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.2rem;
 }
 
 #tp2-title{
@@ -99,4 +98,47 @@
 #tp2-memo img{
     object-fit: cover;
     width: 100%;
+}
+
+#tp3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+#tp3-familles{
+    font-family: alte;
+    font-size: 1.3rem;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--text-sec);
+    margin-bottom: 5vh;
+}
+
+#tp3-critères{
+    margin-bottom: 5vh;
+}
+
+#tp3-critères-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#tp3-améliorations{
+    font-family: alte;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    color: var(--text-sec);
+}
+
+#tp3-améliorations h3{
+    text-decoration: underline;
+    margin: 3vh;
 }
