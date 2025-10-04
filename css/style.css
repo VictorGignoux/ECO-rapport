@@ -48,7 +48,7 @@ html{
 body{
     width: 100vw;
     min-height: 100vh;
-	background-color: var(--bg);
+	background-color: var(--bg); /* maybe change to white */
     display: flex;
     flex-direction: column;
 }

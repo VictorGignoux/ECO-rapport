@@ -30,6 +30,7 @@
 
 .radar-btn{
     color: var(--text);
+    background-color: var(--container);
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
     font-size: 0.8rem;
