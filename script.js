@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', function(){
-
-});
-
 function selectRadar(index) {
     const img = document.getElementById('tp1-radar-img');
     img.setAttribute('src', `./img/radars/radar${index}.png`);

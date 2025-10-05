@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BUT3 - ECO | TP3</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/head.css">
-    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/test.css">
 
     <link rel="icon" type="image/png" href="./img/favicon.png">
 
@@ -112,31 +110,45 @@
         </div>
 
 
-        <h2>Améliorations</h2>
+        <h2>Améliorations <span>(par ordre de priorité)</span></h2>
 
         <div id="tp3-améliorations">
-            <h3>Le service est utilisable avec un débit faible</h3>
-            <p>Afin de remplir ce critères, l'équipe des designers pourrait faire une version plus légère du site avec moins d'images et de lourds carroussels, regrouper et minimiser le CSS et employer le chargement différé pour les images.</p>
-            <p>Ces améliorations visent à permettre à des personnes ne bénéficiant pas d'une connexion haut débit d'accéder facilement au site, mais nécessite une importante refonte du site avec probablement moins de contenu.</p>
+            <h3>Le service permet à l’utilisateur de décider de l’activation des services tiers</h3>
+            <p>Le site de la Ville de Laval intègre plusieurs services tiers, comme les outils de mesure d’audience, les vidéos externes ou les boutons de partage sur les réseaux sociaux. Pour répondre à ce critère, il est essentiel de donner à l’usager le contrôle sur ces éléments. Cela passe par la mise en place d’un bandeau de consentement clair et granulaire, permettant d’activer ou non chaque service tiers, ainsi que par le blocage par défaut des scripts tant que le consentement n’est pas donné.</p>
+            <p>Ces actions, impliquant la DSI, les développeurs et le service communication, garantiraient une meilleure conformité RGPD et une réduction des ressources chargées inutilement, tout en améliorant la transparence envers les citoyens. Les freins principaux concernent la complexité technique et la crainte de perdre certaines statistiques, mais les gains en sobriété numérique et en confiance utilisateur sont significatifs.</p>
 
             <h3>Le poids total des pages est limité</h3>
             <p>APour réduire leur poids et répondre au critère du RGESN, plusieurs actions peuvent être mises en place : compression et conversion des images en formats légers (WebP/AVIF), réduction des scripts et polices inutiles, minification du code et mise en cache, ainsi qu’un allègement du contenu visuel trop gourmand (carrousels, vidéos).</p>
             <p>Ces améliorations, menées conjointement par la DSI, les développeurs, les graphistes et le service communication, permettraient de réduire le poids des pages de plus de 60 %, d’améliorer les performances et de limiter l’impact environnemental. Les principaux freins résident dans la charge de travail initiale et la crainte de pertes esthétiques ou marketing, mais les bénéfices en termes de sobriété, d’accessibilité et de rapidité sont majeurs.</p>
 
-            <h3>Le service permet à l’utilisateur de décider de l’activation des services tiers</h3>
-            <p>Le site de la Ville de Laval intègre plusieurs services tiers, comme les outils de mesure d’audience, les vidéos externes ou les boutons de partage sur les réseaux sociaux. Pour répondre à ce critère, il est essentiel de donner à l’usager le contrôle sur ces éléments. Cela passe par la mise en place d’un bandeau de consentement clair et granulaire, permettant d’activer ou non chaque service tiers, ainsi que par le blocage par défaut des scripts tant que le consentement n’est pas donné.</p>
-            <p>Ces actions, impliquant la DSI, les développeurs et le service communication, garantiraient une meilleure conformité RGPD et une réduction des ressources chargées inutilement, tout en améliorant la transparence envers les citoyens. Les freins principaux concernent la complexité technique et la crainte de perdre certaines statistiques, mais les gains en sobriété numérique et en confiance utilisateur sont significatifs.</p>
+            <h3>Le service est utilisable avec un débit faible</h3>
+            <p>Afin de remplir ce critères, l'équipe des designers pourrait faire une version plus légère du site avec moins d'images et de lourds carroussels, regrouper et minimiser le CSS et employer le chargement différé pour les images.</p>
+            <p>Ces améliorations visent à permettre à des personnes ne bénéficiant pas d'une connexion haut débit d'accéder facilement au site, mais nécessite une importante refonte du site avec probablement moins de contenu.</p>
+        </div>
+
+        <h2>Synthèse</h2>
+
+        <div id="tp3-synthèse" class="container">
+            Le Référentiel Général d’Écoconception des Services Numériques (RGESN) est un cadre national qui vise à guider les organisations publiques et privées vers un numérique plus responsable, plus sobre et plus accessible. Il regroupe un ensemble de bonnes pratiques techniques, fonctionnelles et organisationnelles permettant de réduire l’empreinte environnementale des sites web, applications et services numériques, tout en améliorant leur efficacité et leur pérennité.
+            <br>
+            Se conformer au RGESN revêt une importance stratégique et éthique. D’un point de vue environnemental, le secteur numérique représente une part croissante des émissions de gaz à effet de serre et de la consommation d’énergie mondiale. Chaque site, application ou fichier en ligne mobilise des serveurs, des réseaux et des terminaux dont la fabrication et l’usage ont un coût écologique considérable. En adoptant les principes du RGESN — comme la réduction du poids des pages, la limitation des scripts, la sobriété des contenus visuels et la rationalisation du code —, les organisations contribuent directement à réduire leur impact environnemental.
+            <br>
+            Les bénéfices économiques sont également notables. Des services plus légers et optimisés consomment moins de ressources serveur et de bande passante, ce qui se traduit par une diminution des coûts d’hébergement, de stockage et de maintenance. Par ailleurs, un site plus rapide et plus fluide améliore l’expérience utilisateur, augmente la satisfaction et renforce l’efficacité des services rendus. Cela favorise aussi une meilleure accessibilité pour les personnes disposant de faibles débits ou d’appareils anciens, contribuant ainsi à l’inclusion numérique.
+            <br>
+            Sur le plan de l’image et de la gouvernance, le respect du RGESN valorise une organisation engagée dans une démarche de responsabilité sociale et environnementale. C’est un levier de transparence et de confiance envers les usagers, surtout lorsqu’il s’accompagne d’actions concrètes comme la maîtrise des services tiers, la protection des données personnelles et la réduction des contenus inutiles. Cette démarche s’inscrit pleinement dans les politiques publiques actuelles de transition écologique et numérique responsable.
+            <br>
+            Pour convaincre les parties prenantes — directions, services techniques, communication, élus, partenaires —, il est essentiel de présenter cette démarche non comme une contrainte, mais comme une opportunité d’amélioration globale. L’écoconception numérique n’est pas seulement un enjeu environnemental : c’est aussi un facteur de performance, d’efficacité et de cohérence stratégique. Mettre en avant les gains mesurables (temps de chargement, réduction du poids des pages, économies d’énergie, satisfaction utilisateur) permet d’ancrer la démarche dans une logique concrète et progressive.
+            <br>
+            L’engagement peut se faire étape par étape : commencer par des actions simples à fort impact (compression des images, suppression des scripts inutiles, mise en cache, consentement des services tiers), avant d’aborder des refontes structurelles plus ambitieuses. Cette approche pragmatique permet de mobiliser progressivement l’ensemble des acteurs autour d’un objectif commun : concevoir des services numériques plus performants, plus durables et plus respectueux de l’environnement.
+            <br>
+            En définitive, se conformer au RGESN, c’est s’inscrire dans une vision d’avenir, où la sobriété, l’efficacité et la responsabilité deviennent des piliers du numérique. C’est une démarche gagnant-gagnant, à la fois pour l’environnement, pour les utilisateurs et pour la pérennité des services numériques.
         </div>
 
     </div>
 
     <a id="previous-page-btn" href="./tp2.html" class="page-btn">
         <img src="./svg/left-arrow.svg" class="arrow-svg" alt="left">
-        <p class="page-btn-title"></p>
-    </a>
-    <a id="next-page-btn" href="" class="page-btn">
-        <p class="page-btn-title"></p>
-        <img src="./svg/right-arrow.svg" class="arrow-svg" alt="right">
+        <p class="page-btn-title">Décryptage technique et pédagogique de Website Carbon Calculator</p>
     </a>
 </body>
 </html>
