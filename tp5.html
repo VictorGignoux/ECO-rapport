@@ -7,26 +7,177 @@
     <title>BUT3 - ECO | Audit et conformité au RGAA</title>
 
     <link rel="stylesheet" href="css/test.css">
-
     <link rel="icon" type="image/png" href="./img/favicon.png">
-
-    <script src="script.js"></script>
 </head>
 <body>
-	<div id="head">
-	    <div id="head-container">
-	        <h1>BUT3 - ÉCOCONCEPTION</h1>
-	        <div id="head-me">Victor Gignoux - X2</div>
-	    </div>
-	</div>
+    <div id="head">
+        <div id="head-container">
+            <h1>BUT3 - ÉCOCONCEPTION</h1>
+            <div id="head-me">Victor Gignoux - X2</div>
+        </div>
+    </div>
 
-	<div id="content">
+    <div id="content">
 
-	</div>
+        <h2>1. Découverte du RGAA</h2>
+        <div class="container">
+            <p>Le RGAA repose sur les <strong>WCAG 2.1</strong> (Web Content Accessibility Guidelines) et se décline selon quatre principes fondamentaux :</p>
+            <ul>
+                <li><strong>Perceptible :</strong> les contenus doivent être présentés de manière à pouvoir être perçus par tous les utilisateurs.</li>
+                <li><strong>Utilisable :</strong> les composants d’interface et la navigation doivent être utilisables via différentes modalités.</li>
+                <li><strong>Compréhensible :</strong> le contenu et le fonctionnement doivent être prévisibles et compréhensibles.</li>
+                <li><strong>Robuste :</strong> le contenu doit être interprétable de façon fiable par un large éventail d’agents utilisateurs.</li>
+            </ul>
 
-    <a id="previous-page-btn" href="./tp4.html" class="page-btn">
-    	<img src="./svg/left-arrow.svg" class="arrow-svg" alt="left">
-        <p class="page-btn-title">Découverte de l’accessibilité numérique : audit et correction avec WAVE</p>
+            <p>Le référentiel s’organise en <strong>13 thématiques</strong> : Images, Cadres, Couleurs, Multimédia, Tableaux, Liens, Scripts, Éléments obligatoires, Structuration de l’information, Présentation de l’information, Formulaires, Navigation et Consultation.</p>
+
+            <p>Les 5 critères choisis pour cet audit sont :</p>
+            <ul>
+                <li>1.1 - Chaque image porteuse d’information possède une alternative textuelle (niveau A).</li>
+                <li>3.2 - Le contraste entre le texte et l’arrière-plan est suffisant (niveau AA).</li>
+                <li>9.1 - Les pages sont structurées par une hiérarchie de titres cohérente (niveau A).</li>
+                <li>10.7 - Les textes ne doivent pas être trop petits pour être lisibles (niveau AA).</li>
+                <li>12.6 - La navigation est cohérente et identique sur l’ensemble du site (niveau AA).</li>
+            </ul>
+        </div>
+
+        <h2>2. Audit selon le RGAA</h2>
+
+        <div id="tp4-audit" class="container">
+            <table class="tab">
+                <tr class="tab-line tab-cat">
+                    <th class="tab-line-item">Thème RGAA</th>
+                    <th class="tab-line-item">Critère</th>
+                    <th class="tab-line-item">Conforme ?</th>
+                    <th class="tab-line-item">Preuves / Observations</th>
+                    <th class="tab-line-item">Outils utilisés</th>
+                </tr>
+
+                <tr class="tab-line">
+                    <td class="tab-line-item">Images</td>
+                    <td class="tab-line-item">1.1 – Texte alternatif pour les images porteuses d’information</td>
+                    <td class="tab-line-item">Non conforme</td>
+                    <td class="tab-line-item">Plusieurs images décoratives ne possèdent pas d’attribut <code>alt</code>.</td>
+                    <td class="tab-line-item">WAVE, Inspecteur HTML</td>
+                </tr>
+
+                <tr class="tab-line">
+                    <td class="tab-line-item">Couleurs</td>
+                    <td class="tab-line-item">3.2 – Contraste suffisant entre texte et fond</td>
+                    <td class="tab-line-item">Partiellement conforme</td>
+                    <td class="tab-line-item">Certains textes gris sur fond clair n’atteignent pas le ratio 4.5:1.</td>
+                    <td class="tab-line-item">Contrast Checker, Colour Contrast Analyser</td>
+                </tr>
+
+                <tr class="tab-line">
+                    <td class="tab-line-item">Structure</td>
+                    <td class="tab-line-item">9.1 – Hiérarchie de titres cohérente</td>
+                    <td class="tab-line-item">Non conforme</td>
+                    <td class="tab-line-item">Présence de plusieurs <code>h1</code> par page et titres sautant de <code>h2</code> à <code>h4</code>.</td>
+                    <td class="tab-line-item">WAVE, HeadingsMap</td>
+                </tr>
+
+                <tr class="tab-line">
+                    <td class="tab-line-item">Présentation</td>
+                    <td class="tab-line-item">10.7 – Taille de police lisible</td>
+                    <td class="tab-line-item">Conforme</td>
+                    <td class="tab-line-item">Les textes respectent une taille minimale de 16px, lisible sur mobile et desktop.</td>
+                    <td class="tab-line-item">DevTools, WAVE</td>
+                </tr>
+
+                <tr class="tab-line">
+                    <td class="tab-line-item">Navigation</td>
+                    <td class="tab-line-item">12.6 – Navigation cohérente sur tout le site</td>
+                    <td class="tab-line-item">Partiellement conforme</td>
+                    <td class="tab-line-item">Les menus sont identiques mais certains liens manquent d’intitulés explicites.</td>
+                    <td class="tab-line-item">WAVE, NVDA</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>3. Analyse et recommandations</h2>
+        <div id="tp5-analyse" class="container">
+            <p>Les trois critères les moins respectés sont :</p>
+            <ul>
+                <li>1.1 – Absence de texte alternatif sur certaines images.</li>
+                <li>3.2 – Contraste insuffisant entre texte et arrière-plan.</li>
+                <li>9.1 – Hiérarchie des titres incohérente.</li>
+            </ul>
+
+            <div class="little-container">
+                <h3>Critère 1.1 – Texte alternatif manquant</h3>
+                <p><strong>Solution technique :</strong> Ajouter un attribut <code>alt</code> pertinent pour chaque image informative.</p>
+                <p><strong>Acteurs :</strong> Développeur, rédacteur web.</p>
+                <p><strong>Exemple :</strong></p>
+                <pre><code><img src="produit.jpg" alt="Photographie du produit X en situation d’usage"></code></pre>
+            </div>
+
+        <div class="little-container">
+            <h3>Critère 3.2 – Contraste insuffisant</h3>
+            <p><strong>Solution technique :</strong> Revoir la palette de couleurs pour atteindre un ratio de 4.5:1 minimum.</p>
+            <p><strong>Acteurs :</strong> Designer, intégrateur.</p>
+            <p><strong>Exemple :</strong></p>
+            <pre><code>color: #1e3a8a; background-color: #ffffff;</code></pre>
+        </div>
+
+        <div class="little-container">
+            <h3>Critère 9.1 – Hiérarchie des titres</h3>
+            <p><strong>Solution technique :</strong> Utiliser une structure sémantique claire et unique.</p>
+            <p><strong>Acteurs :</strong> Développeur front-end.</p>
+            <p><strong>Exemple :</strong></p>
+            <pre><code><h1>Titre principal</h1>
+            <h2>Sous-titre</h2>
+            <h3>Section secondaire</h3></code></pre>
+        </div>
+
+        <h2>4. Plan d’action et argumentaire</h2>
+        <div class="container">
+            <p>Les priorités sont définies selon l’impact utilisateur et la facilité de mise en œuvre :</p>
+            <ul>
+                <li><strong>Priorité 1 :</strong> Ajouter des textes alternatifs (impact élevé, correction rapide).</li>
+                <li><strong>Priorité 2 :</strong> Corriger les contrastes (impact fort sur la lisibilité).</li>
+                <li><strong>Priorité 3 :</strong> Structurer la hiérarchie des titres (amélioration de la navigation).</li>
+            </ul>
+
+            <p><strong>Argumentaire :</strong> La conformité au RGAA est une <strong>obligation légale</strong> pour les sites publics et fortement recommandée pour les sites privés. Elle favorise l’inclusion des personnes en situation de handicap et améliore la qualité globale de l’expérience utilisateur. Une bonne accessibilité renforce également l’image responsable et la crédibilité du site.</p>
+
+            <p><strong>Échéancier :</strong></p>
+            <ul>
+                <li>Semaine 1 : audit complet et priorisation des corrections.</li>
+                <li>Semaine 2–3 : corrections techniques et tests manuels.</li>
+                <li>Semaine 4 : validation finale et documentation interne.</li>
+            </ul>
+        </div>
+
+        <h2>5. Que retenir ?</h2>
+        <div class="container">
+            <p>Le RGAA est la déclinaison française des <strong>WCAG 2.1</strong>. Il propose une méthodologie opérationnelle adaptée au contexte légal français.</p>
+            <p>Checklist simplifiée pour les développeurs :</p>
+            <ul>
+                <li>Toujours définir un attribut <code>alt</code> pour les images.</li>
+                <li>Vérifier les contrastes avec un ratio minimal de 4.5:1.</li>
+                <li>Utiliser une hiérarchie logique des titres.</li>
+                <li>S’assurer que la navigation et les liens soient explicites.</li>
+                <li>Tester les pages avec un lecteur d’écran.</li>
+            </ul>
+        </div>
+
+        <h2>Synthèse</h2>
+        <div id="tp4-synth" class="container">
+            <p>Cette étude du RGAA démontre que l’accessibilité est un levier essentiel pour une expérience inclusive. Une mise en conformité progressive, accompagnée de bonnes pratiques, permet non seulement de respecter la réglementation mais aussi de renforcer la qualité globale du service numérique.</p>
+        </div>
+
+    </div>
+
+    <a id="previous-page-btn" href="./tp3.html" class="page-btn">
+        <img src="./svg/left-arrow.svg" class="arrow-svg" alt="left">
+        <p class="page-btn-title">Application du RGESN : audit et amélioration d’un service numérique</p>
     </a>
+
+    <a id="next-page-btn" href="./tp5.html" class="page-btn">
+        <p class="page-btn-title">Comparaison RGAA / WCAG et checklist</p>
+        <img src="./svg/right-arrow.svg" class="arrow-svg" alt="right">
+    </a>
+
 </body>
 </html>

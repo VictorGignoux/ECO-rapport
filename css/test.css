@@ -23,6 +23,12 @@ a:hover {
     text-decoration: underline;
 }
 
+h2 {
+    font-size: 1.8rem;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
 /* Header */
 #head {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -471,13 +477,6 @@ a:hover {
     padding: 0 2rem;
 }
 
-#tp3 h2 {
-    font-size: 1.8rem;
-    color: #1e3a8a;
-    margin: 3rem 0 1.5rem 0;
-    font-weight: 600;
-}
-
 #tp3 h2 span {
     font-size: 1.2rem;
     color: #6b7280;
@@ -500,7 +499,7 @@ a:hover {
     margin-bottom: 3rem;
 }
 
-#tp3-familles > div {
+.little-container {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
@@ -601,6 +600,12 @@ a:hover {
     display: block;
     content: "";
     margin-top: 1.5rem;
+}
+
+#tp5-analyse{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
 }
 
 /* Responsive TP3 */
