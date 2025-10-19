@@ -120,12 +120,6 @@ a:hover {
     transition: background-color 0.2s ease;
 }
 
-.tab-line-item:first-child {
-    font-weight: 600;
-    color: #1e3a8a;
-    width: 15%;
-}
-
 /* Deuxième partie */
 #tp1-second-part {
     display: grid;

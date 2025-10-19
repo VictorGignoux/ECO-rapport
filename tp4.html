@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BUT3 - ECO | Découverte de l’accessibilité numérique : audit et correction avec WAVE</title>
+
+    <link rel="stylesheet" href="css/test.css">
+
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+
+    <script src="script.js"></script>
+</head>
+<body>
+	<div id="head">
+	    <div id="head-container">
+	        <h1>BUT3 - ÉCOCONCEPTION</h1>
+	        <div id="head-me">Victor Gignoux - X2</div>
+	    </div>
+	</div>
+
+	<div id="content">
+
+		<table class="tab">
+			<tr class="tab-line tab-cat">
+				<th class="tab-line-item">Type</th>
+				<th class="tab-line-item">Element concerné</th>
+				<th class="tab-line-item">Localisation</th>
+				<th class="tab-line-item">Impact pour l'utilisateur</th>
+				<th class="tab-line-item">Solution proposée</th>
+			</tr>
+
+			<tr class="tab-line">
+				<th class="tab-line-item">Erreur</th>
+				<th class="tab-line-item">Image avec des liens sans texte alternatif</th>
+				<th class="tab-line-item"><a href="https://www.laval.fr/accueil">https://www.laval.fr/accueil</a></th>
+				<th class="tab-line-item">Si l'utilisateur ne peux pas charger l'image, il n'a aucun moyen de savoir de quoi il s'agit.</th>
+				<th class="tab-line-item">Ajouter un texte alternatif à chaque image (surtout quand celle-ci est un lien vers une autre page).</th>
+			</tr>
+
+			<tr class="tab-line">
+				<th class="tab-line-item">Erreur</th>
+				<th class="tab-line-item">Mauvais contraste</th>
+				<th class="tab-line-item"><img src="./img/contraste.png" alt="Mauvais contraste"></th>
+				<th class="tab-line-item">Le contenu peut être illisible ou incompréhensible pour l'utilisateur si les couleurs sont mal choisies.</th>
+				<th class="tab-line-item">Choisir des couleurs bien contrastées. On peut s'aider de sites qui proposent des palettes de couleurs prédéfinies pour le web (ex : <a href="https://www.radix-ui.com/colors">radix colors</a>).</th>
+			</tr>
+
+			<tr class="tab-line">
+				<th class="tab-line-item">Alerte</th>
+				<th class="tab-line-item">Texte alternatif répétitif</th>
+				<th class="tab-line-item"><a href="https://www.laval.fr/accueil">https://www.laval.fr/accueil</a></th>
+				<th class="tab-line-item">Si un utilisateur ne peut pas charger les images, il ne peut pas diférencier les images ou va croire qu'elles sont les mêmes.</th>
+				<th class="tab-line-item">Définir un texte alternatif précis et différent pour chaque image.</th>
+			</tr>
+
+			<tr class="tab-line">
+				<th class="tab-line-item">Alerte</th>
+				<th class="tab-line-item">Hiérarchie des titres mal définie</th>
+				<th class="tab-line-item"><img src="./img/heading.png" alt="Mauvaise hiérarchie"></th>
+				<th class="tab-line-item">L'utilisation d'une hiérarchie facilite la navigation et la structuration de la page. Sans cela, l'utilisateur peut être plus facilement perdu.</th>
+				<th class="tab-line-item">Définir une structure claire de la page en utilisant une hiérarchie des titres.</th>
+			</tr>
+
+			<tr class="tab-line">
+				<th class="tab-line-item">Alerte</th>
+				<th class="tab-line-item">Liens similaires</th>
+				<th class="tab-line-item"><img src="./img/links.png" alt="Liens similaires"><br>(Les deux textes renvoient vers la même url)</th>
+				<th class="tab-line-item">L'utilisateur ne va pas savoir sur quel lien cliquer et peut croire que les liens dirigent vers des pages différentes.</th>
+				<th class="tab-line-item">Supprimer les liens inutiles et redondants.</th>
+			</tr>
+
+			<tr class="tab-line">
+				<th class="tab-line-item">Alerte</th>
+				<th class="tab-line-item">Texte trop petit</th>
+				<th class="tab-line-item"><img src="./img/smalltext.png" alt="Texte trop petit"></th>
+				<th class="tab-line-item">Un texte trop petit peut facilement devenir illisible, surtout sur des petites écrans.</th>
+				<th class="tab-line-item">Agrandir le texte pour qu'il soit lisible par tous. Eventuellement définir une taille de police minimale.</th>
+			</tr>
+		</table>
+
+		<div id="tp4-synth">
+			
+		</div>
+
+	</div>
+
+    <a id="previous-page-btn" href="./tp3.html" class="page-btn">
+    	<img src="./svg/left-arrow.svg" class="arrow-svg" alt="left">
+        <p class="page-btn-title">Application du RGESN : audit et amélioration d’un service numérique</p>
+    </a>
+    <a id="next-page-btn" href="./tp4.html" class="page-btn">
+        <p class="page-btn-title">Audit et conformité au RGAA</p>
+        <img src="./svg/right-arrow.svg" class="arrow-svg" alt="right">
+    </a>
+</body>
+</html>
